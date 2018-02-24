@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "bookshelf": "^0.12.1",
+    "express": "^4.16.2",
+    "knex": "^0.14.4",
+    "path": "^0.12.7",
+    "pg": "^7.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1"
