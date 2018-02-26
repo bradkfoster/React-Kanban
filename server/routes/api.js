@@ -5,6 +5,7 @@ const router = express.Router();
 
 router.route('/')
 .post((req,res)=>{
+  console.log(req.body);
   let {title,priority,created_by,assigned_to} = req.body;
   let status = 'Queue';
   return new Cards({title,priority,status,created_by,assigned_to})
