@@ -16,7 +16,7 @@ export const getCards = ()=>{
       return result.data
     })
     .then(result=>{
-      console.log('result get',result);
+    
       dispatch({
         type:GET_CARDS,
         cards:result
@@ -30,10 +30,14 @@ export const getCards = ()=>{
 
 export const addCard = (card) =>{
   console.log('in ADD function')
+  console.log(card)
   return dispatch =>{
     return axios.post('/api/cards',card)
     .then(result=>{
-      console.log(result)
+      if(!result){
+        console.log('Card could not be add')
+      }
+      return getCards()(dispatch)
     })
     .catch(err=>{
       console.log(err);

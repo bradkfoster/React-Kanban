@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import '../index.css';
 import {connect} from 'react-redux';
 import Header from '../components/header'
-import Done from '../components/Done'
-import Queue from '../components/Queue'
-import Progress from '../components/Progress';
+import Column from '../components/Columns';
 import thunk from 'redux-thunk';
 import {getCards} from '../actions'
 import {addCard} from '../actions'
@@ -34,9 +32,12 @@ console.log('this.props', this.props.addCard)
       <div className="App">
         
         <Header className="header"/>
-        <Queue className= 'queueCol' cards={this.props.cards}/>
-        <Done className='doneCol'/>
-        <Progress />  <AddForm addCard= {this.props.addCard}/>      
+        <AddForm addCard= {this.props.addCard}/> 
+        <Column cards={this.props.cards}/>
+        {/* <Queue className= 'queueCol' cards={this.props.cards}/>
+        
+        <Progress />   */}
+             
       </div>
     );
   }

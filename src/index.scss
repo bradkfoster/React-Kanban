@@ -1,0 +1,39 @@
+.header{
+  margin-top: 50px;
+  text-align: center;
+}
+.ColDiv{
+display: flex;
+justify-content: center;
+justify-content: space-around;
+
+
+
+
+  .progressDiv{
+    border: solid 2px;
+    border-radius: 2px 2px 2px 2px;
+    width: 400px;
+    height: 400px;
+    
+}
+  .queDiv{
+  border: solid 2px;
+  border-radius: 2px 2px 2px 2px;
+  width: 400px;
+  height: 400px;
+}
+  .doneDiv{
+    border: solid 2px;
+    border-radius: 2px 2px 2px 2px;
+    width: 400px;
+    height: 400px;
+}
+}
+
+.card{
+  border: solid 2px;
+  height: 50px;
+  text-align: center;
+}
+

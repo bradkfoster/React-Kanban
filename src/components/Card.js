@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Card = ({card}) => {
-  console.log('CARDS',card)
+const Card = ({cards}) => {
+  console.log(cards.cards)
 
 return (
+
   <div>
     {
-      card.map((elem)=>{
+      cards.cards.map((elem)=>{
           
         return (
           <div className="card">

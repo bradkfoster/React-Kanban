@@ -1,15 +1,20 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import thunk from 'redux-thunk';
+import {addCard} from '../actions';
+
 
 
 class AddForm extends Component {
-  constructor(addCard){
+  constructor(props){
     
-    super(addCard)
+    super(props)
     this.state = {
       title: '',
       priority: '',
       created_by:'',
       assigned_to: ''
+
     }
  
   
@@ -39,7 +44,7 @@ class AddForm extends Component {
       assigned_to:this.state.assigned_to
     }
     
-   
+   this.props.addCard(newCard);
 
 }
   
@@ -74,7 +79,26 @@ return (
 }
 }
 
+const mapStateTopProps = state =>{
+ 
+  return{
+    cards:state.cards.cards
+  }
+}
+
+const mapDispatchToProps = dispatch =>{
+  return{
+  
+    addCard: (data) =>{
+      dispatch(addCard(data));
+    }
+  }
+}
+const ConnectedApp = connect (
+  mapStateTopProps,
+  mapDispatchToProps
+)(AddForm)
 
 
 
-export default AddForm;
+export default ConnectedApp;

@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Done = () => {
+const Done = (cards ) => {
+
+
 
   return (
+    <div className="doneDiv">
       <h1>Done</h1>
+    </div>
   )
 }
 

@@ -4,10 +4,11 @@ const Queue = ({cards}) => {
 
 
 
+
   return (
   <div className="queDiv">
       <h1>Queue</h1>
-        <Card card={cards}/>
+        <Card cards={cards}/>
    </div>
   )
 }
