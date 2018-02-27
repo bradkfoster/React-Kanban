@@ -1,12 +1,24 @@
 import React from 'react';
+import Card from './Card';
 
-const Done = (cards ) => {
+const Done = ({cards }) => {
 
+ 
+ 
+ let status=  cards.cards.filter((card)=>{
+   
+   return card.status === 'low'
+ })
 
+ 
+ 
+ 
 
   return (
     <div className="doneDiv">
-      <h1>Done</h1>
+      <h1 className='divTitle'>Done</h1>
+      <Card cards={status}/>
+      
     </div>
   )
 }

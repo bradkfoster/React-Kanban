@@ -6,23 +6,31 @@
   display: flex;
   justify-content: center;
   justify-content: space-around; }
+  .ColDiv .divTitle {
+    text-align: center;
+    border-bottom: solid 2px; }
   .ColDiv .progressDiv {
     border: solid 2px;
     border-radius: 2px 2px 2px 2px;
     width: 400px;
-    height: 400px; }
+    height: 800px; }
+  .ColDiv .progressDiv:hover {
+    opacity: .5; }
   .ColDiv .queDiv {
     border: solid 2px;
     border-radius: 2px 2px 2px 2px;
     width: 400px;
-    height: 400px; }
+    height: 800px; }
   .ColDiv .doneDiv {
     border: solid 2px;
     border-radius: 2px 2px 2px 2px;
     width: 400px;
-    height: 400px; }
+    height: 800px; }
 
 .card {
   border: solid 2px;
-  height: 50px;
+  height: 60px;
   text-align: center; }
+
+.card:hover {
+  opacity: .5; }

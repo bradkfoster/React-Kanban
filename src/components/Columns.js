@@ -5,7 +5,7 @@ import Queue from './Queue';
 
 
 const Column = (cards) => {
-  
+ 
   return (
     <div className="ColDiv">
      <Queue cards={cards}/>

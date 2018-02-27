@@ -4,7 +4,7 @@ const Progress = () => {
 
   return (
       <div className="progressDiv">
-        <h1>Progress</h1>
+        <h1 className='divTitle'>Progress</h1>
       </div>
   )
 }

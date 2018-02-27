@@ -1,17 +1,23 @@
 import React from 'react';
 
 const Card = ({cards}) => {
-  console.log(cards.cards)
+ 
+
 
 return (
 
   <div>
     {
-      cards.cards.map((elem)=>{
+      cards.map((elem,ind)=>{
           
         return (
-          <div className="card">
+          <div  className="card" key={ind}>
             {elem.title}
+            <br/>
+            {elem.priority}
+            <br/>
+            {elem.assigned_to}
+
           </div>
         )
       })
