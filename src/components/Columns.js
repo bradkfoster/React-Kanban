@@ -9,8 +9,8 @@ const Column = (cards) => {
   return (
     <div className="ColDiv">
      <Queue cards={cards}/>
-     <Done cards={cards}/>
       <Progress card={cards}/> 
+     <Done cards={cards}/>
 
     </div>
   )
