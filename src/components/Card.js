@@ -1,29 +1,32 @@
 import React from 'react';
 
-const Card = ({cards}) => {
+
+
+  
+
+
+
+const Card = ({id,title,priority,created,clickHandler}) => {
  
 
 
 return (
 
-  <div>
+  <div id={id} className='card'>
     {
-      cards.map((elem,ind)=>{
-          
-        return (
-          <div  className="card" key={ind}>
-            {elem.title}
-            <br/>
-            {elem.priority}
-            <br/>
-            {elem.assigned_to}
-
-          </div>
-        )
-      })
-    }
+      <span>{title}
+      <br/>
+      {priority}
+      <br/>
+      {created}
+      </span>
+      
+       }
+      <button onClick={clickHandler}>button</button>
   </div>
 )
+
+
 
 }
 

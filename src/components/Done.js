@@ -5,22 +5,37 @@ const Done = ({cards }) => {
 
  
  
- let status=  cards.cards.filter((card)=>{
-   
-   return card.status === 'low'
- })
+
 
  
  
  
 
   return (
-    <div className="doneDiv">
-      <h1 className='divTitle'>Done</h1>
-      <Card cards={status}/>
-      
-    </div>
-  )
+    
+    <div className="queDiv">
+        <h1 className='divTitle'>Queue</h1>
+        {
+          cards.cards.filter((cards)=>{
+            return cards.status === 'low'
+          })
+          .map((cards,ind)=>{
+            return (
+              <Card
+              key = {ind}
+              id = {cards.id}
+              title={cards.title}
+              priority={cards.priority}
+              created = {cards.created_by}
+  
+              />
+            )
+          })
+        }
+        
+          
+     </div>
+    )
 }
 
 export default Done;
